@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Chapter201900811" />
+        <module name="Chapter20190801" />
+        <module name="Chapter20190802" />
+        <module name="Chapter20190805" />
+        <module name="Chapter20190806" />
+        <module name="Chapter20190808" />
+        <module name="Chapter20190814" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="Chapter201900811" target="1.6" />
+      <module name="Chapter20190801" target="1.5" />
+      <module name="Chapter20190802" target="1.6" />
+      <module name="Chapter20190805" target="1.5" />
+      <module name="Chapter20190806" target="1.8" />
+      <module name="Chapter20190808" target="1.8" />
+      <module name="Chapter20190814" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 指定对应映射的 包名-->
+<mapper namespace="com.gplbj">
+    <!--resultType 返回类型-->
+  <select id="getUserCount" resultType="Integer">
+      select count(*) from user;
+  </select>
+    <!--parameterType 传参域-->
+    <insert id="addUser" parameterType="com.gplbj.model.User">
+        insert into user(id,username,age,sex)
+        values (#{id},#{userName},#{age},#{sex})
+    </insert>
+    <update id="updateUser" parameterType="com.gplbj.model.User">
+        update user set username=#{userName},age=#{age},sex=#{sex}
+        where id = #{id}
+    </update>
+    <delete id="deleteUser" parameterType="Integer">
+        delete from user where id=#{id}
+    </delete>
+</mapper>

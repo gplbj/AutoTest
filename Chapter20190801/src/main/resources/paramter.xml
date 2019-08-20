@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="parameter">
+    <test name="parameter">
+        <classes>
+            <parameter name="name" value="张三"></parameter>
+            <parameter name="age" value="23"></parameter>
+            <class name="com.gplbj.testng.paramter.paramterTest"></class>
+        </classes>
+    </test>
+</suite>

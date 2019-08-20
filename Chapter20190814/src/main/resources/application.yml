@@ -1,0 +1,18 @@
+server:
+  port: 8888 #端口号
+logging:
+  file: userManager.log  # 日志文件名字
+  path: logs  # 文件夹名称
+
+spring:
+  application:
+     name: userManager
+  datasource:
+     driver-class-name: com.mysql.jdbc.Driver #mysql 驱动 固定写法
+     url : jdbc:mysql://localhost:3306/course?serverTimezone=GMT  # mysql 链接 地址 ?serverTimezone=GMT 改变时序
+     username : root
+     password : root
+mybatis:
+  type-aliases-package: com.gplbj.model  #具体实体类包
+  mapper-locations:
+   - mapper/*  # mapper映射位置 在 resource 下面 建立一个 mapper文件夹 映射里面所有的文件

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AutoTest.iml" filepath="$PROJECT_DIR$/.idea/AutoTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter201900811/Chapter201900811.iml" filepath="$PROJECT_DIR$/Chapter201900811/Chapter201900811.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter20190801/Chapter20190801.iml" filepath="$PROJECT_DIR$/Chapter20190801/Chapter20190801.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter20190802/Chapter20190802.iml" filepath="$PROJECT_DIR$/Chapter20190802/Chapter20190802.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter20190805/Chapter20190805.iml" filepath="$PROJECT_DIR$/Chapter20190805/Chapter20190805.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter20190806/Chapter20190806.iml" filepath="$PROJECT_DIR$/Chapter20190806/Chapter20190806.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter20190808/Chapter20190808.iml" filepath="$PROJECT_DIR$/Chapter20190808/Chapter20190808.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter20190814/Chapter20190814.iml" filepath="$PROJECT_DIR$/Chapter20190814/Chapter20190814.iml" />
+    </modules>
+  </component>
+</project>

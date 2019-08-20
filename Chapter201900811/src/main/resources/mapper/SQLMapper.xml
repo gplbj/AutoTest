@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper 如果有多个mapper文件 这个必须唯一-->
+<mapper namespace="com.gplbj">
+    <select id="loginCase" parameterType="Integer" resultType="com.gplbj.model.LoginCase">
+        select * from logincase where id = #{id};
+    </select>
+    <!--添加用户接口case -->
+    <select id="addUserCase" parameterType="Integer" resultType="com.gplbj.model.AddUserCase" >
+        select * from addusercase where id=#{id};
+    </select>
+    <!--获取用户信息case-->
+    <select id="getUserInfoCase" parameterType="Integer" resultType="com.gplbj.model.GetUserInfoCase">
+        select * from getuserinfocase where id=#{id}
+    </select>
+    <!--获取用户列表case-->
+    <select id="getUserListCase" parameterType="Integer" resultType="com.gplbj.model.GetUserListCase">
+        select * from getuserlistcase where id=#{id};
+    </select>
+    <!--更新/删除用户信息case-->
+    <select id="updateUserInfoCase" parameterType="Integer" resultType="com.gplbj.model.UpdateUserInfoCase">
+        select * from updateuserinfocase where id=#{id};
+    </select>
+    <!--添加用户接口-->
+    <select id="addUser" parameterType="com.gplbj.model.AddUserCase" resultType="com.gplbj.model.User">
+        select * from user where
+        username=#{userName}
+        and password=#{password}
+        and sex=#{sex}
+        and age=#{age}
+        and permission=#{permission}
+        and isdelete=#{isDelete};
+    </select>
+    <!--获取用户信息-->
+    <select id="getUserInfo" parameterType="com.gplbj.model.GetUserInfoCase" resultType="com.gplbj.model.User">
+        select * from user where id=#{userId};
+    </select>
+    <!--获取用户列表信息-->
+    <select id="getUserList" parameterType="com.gplbj.model.GetUserListCase" resultType="com.gplbj.model.User">
+         select * from user
+         <trim prefix="WHERE" prefixOverrides="and">
+             <if test="null != userName and '' !=userName">
+                 AND username=#{userName}
+             </if>
+             <if test="null != sex and '' !=sex">
+                 AND sex=#{sex}
+             </if>
+             <if test="null != age and '' !=age">
+                 AND age=#{age}
+             </if>
+         </trim>
+        ;
+    </select>
+    <!--获取更新后的数据-->
+    <select id="getUpdateUserInfo" parameterType="com.gplbj.model.UpdateUserInfoCase" resultType="com.gplbj.model.User">
+        select * from user
+        <trim prefix="WHERE" prefixOverrides="and">
+            <if test="null !=userName and '' !=userName">
+                AND username=#{userName}
+            </if>
+            <if test="null !=sex and '' !=sex">
+                AND sex=#{sex}
+            </if>
+            <if test="null !=age and '' !=age">
+                AND age=#{age}
+            </if>
+            <if test="null !=permission and '' !=permission">
+                AND permission=#{permission}
+            </if>
+            <if test="null !=isDelete and '' !=isDelete">
+                AND isdelete=#{isdelete}
+            </if>
+        </trim>
+        AND id = #{userId};
+    </select>
+</mapper>
